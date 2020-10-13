@@ -2,16 +2,13 @@ package HomeWork4.Task2;
 
 public class SportCar extends Car {
 
-    protected String carBrand;
-    protected String carClass;
-    protected double carWeight;
-    protected int enginePower;
-    protected String engineManufacturer;
+    private int enginePower;
+    private String engineManufacturer;
 
-    SportCar() {
-        carBrand = "Spyker";
-        carClass = "SportCar";
-        carWeight = 1.5;
+    public SportCar() {
+        this.carBrand = "Spyker";
+        this.carClass = "SportCar";
+        this.carWeight = 1.5;
         enginePower = 500;
         engineManufacturer = "Swedish Automobile N.V.";
     }
@@ -28,9 +25,9 @@ public class SportCar extends Car {
 
     @Override
     public void printInfo() {
-        System.out.println("Brand: " + carBrand);
-        System.out.println("Class: " + carClass);
-        System.out.println("Weight: " + carWeight + "t");
+        System.out.println("Brand: " + this.carBrand);
+        System.out.println("Class: " + this.carClass);
+        System.out.println("Weight: " + this.carWeight + "t");
         carEngine.engineInfo(enginePower, engineManufacturer);
     }
 

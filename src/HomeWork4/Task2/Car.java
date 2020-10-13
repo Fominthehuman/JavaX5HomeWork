@@ -7,11 +7,11 @@ public abstract class Car implements Turn {
     public double carWeight;
     public Engine carEngine = new Engine();
 
-    abstract void start();
+    public abstract void start();
 
-    abstract void stop();
+    public abstract void stop();
 
-    abstract void printInfo();
+    public abstract void printInfo();
 
     @Override
     public void turnRight() {
