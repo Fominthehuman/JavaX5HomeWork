@@ -1,6 +1,6 @@
 package HomeWork6.Task6Part2Pack;
 
-import Task6Part1Pack.ArrayList;
+import HomeWork6.Task6Part1Pack.ArrayList;
 
 public class Box<T extends Fruit> {
 
