@@ -2,7 +2,10 @@ package HomeWork4.Task2;
 
 public class Engine {
 
-    public void engineInfo(int enginePower, String engineManufacturer) {
+    public String engineManufacturer;
+    public int enginePower;
+
+    public void showEngineInfo() {
         System.out.println("Power: " + enginePower);
         System.out.println("Manufacturer: " + engineManufacturer);
     }

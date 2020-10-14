@@ -9,8 +9,8 @@ public class SportCar extends Car {
         this.carBrand = "Spyker";
         this.carClass = "SportCar";
         this.carWeight = 1.5;
-        enginePower = 500;
-        engineManufacturer = "Swedish Automobile N.V.";
+        this.engine.enginePower = 500;
+        this.engine.engineManufacturer = "Swedish Automobile N.V.";
     }
 
     @Override
@@ -28,7 +28,6 @@ public class SportCar extends Car {
         System.out.println("Brand: " + this.carBrand);
         System.out.println("Class: " + this.carClass);
         System.out.println("Weight: " + this.carWeight + "t");
-        carEngine.engineInfo(enginePower, engineManufacturer);
     }
 
 }

@@ -9,9 +9,10 @@ public class Lorry extends Car {
         this.carBrand = "Scania";
         this.carClass = "Lorry";
         this.carWeight = 3;
-        enginePower = 420;
-        engineManufacturer = "Volkswagen Group";
+        this.engine.enginePower = 420;
+        this.engine.engineManufacturer = "Volkswagen Group";
     }
+
 
     @Override
     public void start() {
@@ -28,7 +29,9 @@ public class Lorry extends Car {
         System.out.println("Brand: " + carBrand);
         System.out.println("Class: " + carClass);
         System.out.println("Weight: " + carWeight + "t");
-        carEngine.engineInfo(enginePower, engineManufacturer);
+        this.engine.showEngineInfo();
     }
+
+    ;
 
 }
