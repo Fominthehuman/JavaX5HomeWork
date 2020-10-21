@@ -1,10 +1,10 @@
 package HomeWork5.FactoryPack;
 
-public class DbLogger extends Logger {
+public class DbLogger implements LoggerInterface {
 
     @Override
-    public void log(String message) {
-        System.out.println("Log into database: " + message);
+    public void makeLog(float outcome) {
+        System.out.println("Log into database: " + outcome);
     }
 
 }
