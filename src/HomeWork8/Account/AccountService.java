@@ -16,7 +16,7 @@ public class AccountService {
     void balance(int accountId) throws UnknownAccountException {
         try {
             System.out.println(accountId + " " + dbConnectController.findAccountInDb(accountId));
-        } catch (NullPointerException | NumberFormatException e) {
+        } catch (NullPointerException | NumberFormatException | SQLException e) {
             throw new UnknownAccountException();
         }
 

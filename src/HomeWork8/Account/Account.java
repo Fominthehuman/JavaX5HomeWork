@@ -6,9 +6,4 @@ public class Account {
     public String holder;
     public double amount;
 
-    Account(){
-
-    }
-
-
 }

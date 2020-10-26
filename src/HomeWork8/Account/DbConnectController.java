@@ -4,6 +4,7 @@ import org.postgresql.util.PSQLException;
 
 import java.sql.*;
 
+
 public class DbConnectController {
 
     protected String urlHostname;
@@ -27,7 +28,7 @@ public class DbConnectController {
         accountInsert = "Insert into public.\"AccountsTest\" (\"accountId\", amount) VALUES ( 3246, 20000)";
     }
 
-    public Connection getDBConnection() {
+    public Connection getDBConnection() throws SQLException {
         Connection dbConnection = null;
         try {
             Class.forName("org.postgresql.Driver");
@@ -39,13 +40,14 @@ public class DbConnectController {
             return dbConnection;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        } finally {
+            dbConnection.close();
         }
         return dbConnection;
     }
 
     public void isDbExistChecker() throws SQLException {
-        try {
-            Connection dbConnection = getDBConnection();
+        try (Connection dbConnection = getDBConnection()) {
             PreparedStatement statement = dbConnection.prepareStatement(createTableSQL);
             statement.executeUpdate();
             /*int a = 0;
@@ -62,7 +64,7 @@ public class DbConnectController {
         }
     }
 
-    public Integer findAccountInDb(int accountId) {
+    public Integer findAccountInDb(int accountId) throws SQLException {
         Statement statement = null;
         Connection dbConnection = null;
         ResultSet rs = null;
@@ -76,13 +78,14 @@ public class DbConnectController {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        } finally {
+            dbConnection.close();
         }
         return Integer.parseInt(amount);
     }
 
     public void updateAccountInDb(int accountId, int finalAmount) throws SQLException {
-        try {
-            Connection dbConnection = getDBConnection();
+        try (Connection dbConnection = getDBConnection()) {
             balanceUpdate = "UPDATE public.\"AccountsTest\" SET amount = " + finalAmount + " where \"accountId\" = " + accountId;
             PreparedStatement statement = dbConnection.prepareStatement(balanceUpdate);
             //через statement пока не вышло
