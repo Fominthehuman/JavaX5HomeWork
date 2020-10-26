@@ -4,7 +4,6 @@ import org.postgresql.util.PSQLException;
 
 import java.sql.*;
 
-
 public class DbConnectController {
 
     protected String urlHostname;
@@ -17,8 +16,8 @@ public class DbConnectController {
 
     public DbConnectController() {
         urlHostname = "jdbc:postgresql://localhost/gkretail";
-        userName = "USER";
-        userPass = "PASS";
+        userName = "gkretail";
+        userPass = "gkretail";
         createTableSQL = "CREATE TABLE IF NOT EXISTS public.\"AccountsTest\" " +
                 "(\"accountId\" integer NOT NULL, " +
                 "amount double precision, " +
@@ -40,8 +39,6 @@ public class DbConnectController {
             return dbConnection;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            dbConnection.close();
         }
         return dbConnection;
     }
