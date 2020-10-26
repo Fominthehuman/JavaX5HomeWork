@@ -16,8 +16,8 @@ public class DbConnectController {
 
     public DbConnectController() {
         urlHostname = "jdbc:postgresql://localhost/gkretail";
-        userName = "USER";
-        userPass = "PASS";
+        userName = "newUSER";
+        userPass = "newPASS";
         createTableSQL = "CREATE TABLE IF NOT EXISTS public.\"AccountsTest\" " +
                 "(\"accountId\" integer NOT NULL, " +
                 "amount double precision, " +
