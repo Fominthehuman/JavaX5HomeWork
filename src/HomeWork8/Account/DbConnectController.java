@@ -16,8 +16,8 @@ public class DbConnectController {
 
     public DbConnectController() {
         urlHostname = "jdbc:postgresql://localhost/gkretail";
-        userName = "newUSER";
-        userPass = "newPASS";
+        userName = "user";
+        userPass = "pass";
         createTableSQL = "CREATE TABLE IF NOT EXISTS public.\"AccountsTest\" " +
                 "(\"accountId\" integer NOT NULL, " +
                 "amount double precision, " +
@@ -39,6 +39,7 @@ public class DbConnectController {
             return dbConnection;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            dbConnection.close();
         }
         return dbConnection;
     }
