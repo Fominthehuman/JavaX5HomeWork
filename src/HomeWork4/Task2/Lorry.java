@@ -2,8 +2,8 @@ package HomeWork4.Task2;
 
 public class Lorry extends Car {
 
-    private int enginePower;
-    private String engineManufacturer;
+    protected int enginePower;
+    protected String engineManufacturer;
 
     public Lorry() {
         this.carBrand = "Scania";

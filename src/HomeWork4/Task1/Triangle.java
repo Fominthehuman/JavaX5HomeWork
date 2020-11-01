@@ -2,20 +2,20 @@ package HomeWork4.Task1;
 
 public class Triangle implements Shape {
 
-    private final double a;
-    private final double b;
-    private final double ab;
+    private double a;
+    private double b;
+    private double h;
 
-    public Triangle() {
-        a = 3.5;
-        b = 4;
-        ab = 30;
+    public Triangle(double a, double b, double h) {
+        this.a = a;
+        this.b = b;
+        this.h = h;
     }
 
     @Override
     public double square() {
         System.out.println("Треугольник");
-        return ((0.5 * a * b) * Math.sin(Math.toRadians(ab)));
+        return ((0.5 * a * b) * Math.sin(Math.toRadians(h)));
     }
 
 }

@@ -2,12 +2,12 @@ package HomeWork4.Task1;
 
 public class Rectangle implements Shape {
 
-    private final double a;
-    private final double b;
+    private double a;
+    private double b;
 
-    public Rectangle() {
-        a = 3.5;
-        b = 4;
+    public Rectangle(double length, double width) {
+        a = length;
+        b = width;
     }
 
     @Override

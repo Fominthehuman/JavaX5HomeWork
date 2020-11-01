@@ -2,10 +2,10 @@ package HomeWork4.Task1;
 
 public class Circle implements Shape {
 
-    private final double r;
+    private double r;
 
-    public Circle() {
-        r = 3.5;
+    public Circle(double radius) {
+        r = radius;
     }
 
     @Override

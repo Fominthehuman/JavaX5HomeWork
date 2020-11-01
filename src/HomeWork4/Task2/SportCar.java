@@ -2,8 +2,8 @@ package HomeWork4.Task2;
 
 public class SportCar extends Car {
 
-    private int enginePower;
-    private String engineManufacturer;
+    protected int enginePower;
+    protected String engineManufacturer;
 
     public SportCar() {
         this.carBrand = "Spyker";
@@ -28,6 +28,7 @@ public class SportCar extends Car {
         System.out.println("Brand: " + this.carBrand);
         System.out.println("Class: " + this.carClass);
         System.out.println("Weight: " + this.carWeight + "t");
+        this.engine.showEngineInfo();
     }
 
 }

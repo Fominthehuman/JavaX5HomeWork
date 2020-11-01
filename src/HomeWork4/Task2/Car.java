@@ -2,9 +2,9 @@ package HomeWork4.Task2;
 
 public abstract class Car implements Turn {
 
-    public String carBrand;
-    public String carClass;
-    public double carWeight;
+    protected String carBrand;
+    protected String carClass;
+    protected double carWeight;
 
     public abstract void start();
 
