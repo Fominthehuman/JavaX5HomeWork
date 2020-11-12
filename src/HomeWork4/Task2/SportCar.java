@@ -9,8 +9,8 @@ public class SportCar extends Car {
         this.carBrand = "Spyker";
         this.carClass = "SportCar";
         this.carWeight = 1.5;
-        this.engine.enginePower = 500;
-        this.engine.engineManufacturer = "Swedish Automobile N.V.";
+        this.engine.setEnginePower(500);
+        this.engine.setEngineManufacturer("Swedish Automobile N.V.");
     }
 
     @Override

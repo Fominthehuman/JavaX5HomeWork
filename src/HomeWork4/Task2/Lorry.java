@@ -9,8 +9,8 @@ public class Lorry extends Car {
         this.carBrand = "Scania";
         this.carClass = "Lorry";
         this.carWeight = 3;
-        this.engine.enginePower = 420;
-        this.engine.engineManufacturer = "Volkswagen Group";
+        this.engine.setEnginePower(420);
+        this.engine.setEngineManufacturer("Volkswagen Group");
     }
 
 
